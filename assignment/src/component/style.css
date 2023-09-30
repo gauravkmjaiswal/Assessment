@@ -1,0 +1,42 @@
+
+  .crypto-table {
+    border-collapse: collapse;
+    width: 80%;
+    margin-top: 20px;
+    background-color: #dadca1;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+  }
+
+  .crypto-table td, .crypto-table th {
+    border: 1px solid #fafafa;
+    padding: 8px;
+    text-align: left;
+    border-radius: 100px;
+  }
+
+  .crypto-table th {
+    background-color: #f2f2f2;
+  }
+
+  .crypto-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .crypto-table tbody tr:hover {
+    background-color: #ddd;
+  }
+
+  .crypto-table h2 {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  .crypto-title{
+    
+     width: 80%;
+     /* display: flex; */
+     margin: auto;
+     margin-top: 5%;
+  }
+  

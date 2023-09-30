@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import WebSocket from 'websocket';
-
+import "./style.css"
 
 const RealTimeData = () => {
   const [data, setData] = useState(null);
@@ -29,19 +29,42 @@ const RealTimeData = () => {
 
   return (
     <div>
-      {data && (
-        <div>
-          <h2>Real Time Data Of Bitcoin to USDT Trades</h2>
-          Trades
-          <h5 >Symbol = {data.s}</h5>
-          <h5 >Price = {data.p} </h5>
-          <h5 >Time = {data.E} </h5>
-          <h5 >Quantity = {data.q} </h5>
-          <h5 >Buyer Id = {data.b} </h5>
-          <h5 >Seller Id = {data.a} </h5>
-          <h5 >Trade Time = {data.T} </h5>
-        </div>
+      <h2 className="crypto-title">Real Time Data Of Bitcoin to USDT Trades</h2>
+  {data && (
+    <table className="crypto-table">
+                <tbody>
+                      <tr>
+                          <td>Symbol</td>
+                          <td>{data.s}</td>
+                      </tr>
+                      <tr>
+                          <td>Price</td>
+                          <td>{data.p}</td>
+                      </tr>
+                      <tr>
+                          <td>Time</td>
+                          <td>{data.E}</td>
+                      </tr>
+                      <tr>
+                          <td>Quantity</td>
+                          <td>{data.q}</td>
+                      </tr>
+                      <tr>
+                          <td>Buyer Id</td>
+                          <td>{data.b}</td>
+                      </tr>
+                      <tr>
+                          <td>Seller Id</td>
+                          <td>{data.a}</td>
+                      </tr>
+                      <tr>
+                          <td>Trade Time</td>
+                          <td>{data.T}</td>
+                      </tr>
+                </tbody>
+            </table>
       )}
+      
     </div>
   );
 };
